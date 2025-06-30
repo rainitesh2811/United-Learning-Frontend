@@ -1,0 +1,515 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to right, #eae8ef, #bc9ed6);
+    color: #fff;
+}
+
+/* Navbar */
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #2A0E61, #1B1E4B);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo-text a:hover {
+    color: #c8d2dd;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+    font-size: 19px;
+}
+
+/* Hamburger Menu for Mobile and Tablet */
+.menu-toggle {
+    display: none; /* Hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1100; /* Ensure it's above other elements */
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) { /* For tablet and below */
+    .menu-toggle {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #2A0E61;
+        position: absolute;
+        top: 60px;
+        left: 20px; /* Align to the left */
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .logo-container {
+        flex: 1;
+    }
+}
+/* ======= MODAL STYLES ======= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999; /* Ensures it is above all elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 10000; /* Ensure it's above everything */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* Mobile Design (Smaller Screens) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        justify-content: flex-start; /* Align hamburger to the left */
+    }
+
+    .nav-links {
+        left: 10px; /* Slightly adjust for smaller screens */
+        top: 60px;
+        width: calc(100% - 20px); /* Center dropdown width */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Slightly smaller font for mobile */
+    }
+}
+
+
+
+/* Class Dropdown */
+.class-dropdown {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; /* Increased gap for better spacing */
+}
+
+/* Dropdown options styling */
+#classSelect {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 15px;
+    border: 2px solid #5A189A;  /* Elegant purple border */
+    border-radius: 8px;
+    background-color: #E0AAFF;  /* Soft purple background */
+    color: #2A0E61;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out, background 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(90, 24, 154, 0.2);  /* Soft purple glow */
+    appearance: none; /* Removes the default dropdown arrow */
+}
+
+/* Adjust the dropdown menu options */
+#classSelect option {
+    background-color: #F3E5F5; /* Light purple for dropdown options */
+    color: #2A0E61; /* Text color for options */
+    padding: 8px; /* Better padding for options */
+    font-size: 16px;
+}
+
+/* Hover and active state for options */
+#classSelect option:hover, 
+#classSelect option:focus {
+    background-color: #C77DFF; /* Vibrant purple for hover */
+    color: #FFFFFF; /* White text for better readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #classSelect {
+        font-size: 16px; /* Adjust font size for tablets */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #classSelect {
+        font-size: 14px; /* Smaller size for mobile */
+        padding: 8px;
+        
+    }
+}
+
+
+/* Main Container */
+.container {
+    max-width: 1100px;
+    margin: 120px auto 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeInUp 0.8s ease-in-out;
+    color: #2A0E61;
+}
+
+.container p {
+    margin-bottom: 50px;
+    color: #5A189A;  /* Purple text */
+}
+
+/* Section Headers */
+h2 {
+    text-align: center;
+    color: #5A189A;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Class Container */
+.class-container {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 35px;
+    background: linear-gradient(135deg, #5A189A, #9D4EDD); /* Purple gradient */
+    border-radius: 15px;
+    transition: transform 0.4s ease-in-out, background 0.4s ease-in-out;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.class-container:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(135deg, #3C096C, #7B2CBF); /* Darker purple hover effect */
+}
+
+.class-container h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid #E0AAFF;
+    padding-bottom: 8px;
+}
+
+/* Subjects Container */
+.subjects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Individual Subject */
+.subject {
+    position: relative;
+    cursor: pointer;
+    padding: 18px 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #5A189A;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    font-size: 20px;
+    width: 100%;
+    max-width: 220px;
+    border: 2px solid transparent;
+}
+
+.subject:hover {
+    background: #E0AAFF;
+    color: #2A0E61;
+    transform: translateY(-3px);
+    border: 2px solid #9D4EDD;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    width: 100%;
+    background: rgba(93, 63, 211, 0.85);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 12px;
+    text-align: left;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.subject.active .dropdown {
+    display: block;
+}
+
+/* Dropdown Links */
+.dropdown a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+.dropdown a:hover {
+    background: #F1FAEE;
+    color: #5A189A;
+    border-radius: 5px;
+    padding-left: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .subjects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subject {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .dropdown {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .class-container {
+        padding: 25px;
+    }
+
+    #classSelect {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* Keep Moving Section */
+.keep-moving {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #6A0DAD, #4B0082);
+    color: white;
+}
+
+.keep-moving h2 {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.keep-moving p {
+    font-size: 18px;
+}
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #4B0082, #6A0DAD);
+    color: white;
+    font-size: 16px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Sections */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+
+/* Headings */
+.footer-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.youtube:hover { background: #FF0000; }
+.facebook:hover { background: #1877F2; }
+.instagram:hover { background: #C13584; }
+.whatsapp:hover { background: #25D366; }
+.email:hover { background: #FFD700; }
+
+/* Policies */
+.policies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.policies ul li {
+    margin: 8px 0;
+}
+
+.policies ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.policies ul li a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+/* Copyright */
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}

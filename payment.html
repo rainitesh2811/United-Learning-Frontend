@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payment - United Learning</title>
+  <link rel="stylesheet" href="payment.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Payment Page</h1>
+    <div class="payment-info">
+      <p>Course: <span id="course-name"></span></p>
+      <p>Amount: ₹<span id="amount"></span></p>
+    </div>
+    <button id="pay-button">Pay Now</button>
+    <div id="payment-status"></div>
+  </div>
+  <script type="module" src="payment.js"></script>
+</body>
+</html>

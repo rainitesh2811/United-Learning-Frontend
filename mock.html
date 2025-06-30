@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Tests & Study Material</title>
+    <link rel="stylesheet" href="mock.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="fixed-header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="UL logo.png" alt="United Learning Logo" class="logo-img">
+                <span class="logo-text">
+                    <a href="index.html#hero">UNITED LEARNING</a>
+                </span>
+            </div>
+            <!-- Hamburger Menu Toggle -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html#course">Courses</a></li>
+                <li><a href="mock.html">Mock Tests</a></li>
+                <li><a href="exams.html">Upcoming Exams</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li id="login-btn"><a href="login.html">Login</a></li>
+          <li id="user-account" style="display: none;">
+              <a href="account.html">Account</a>
+          </li>
+          <li id="logout-btn" style="display: none;">
+              <button onclick="logout()">Logout</button>
+          </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+    <div class="container">
+        <h1>🎯Mock Tests🎯</h1>
+        <p>Select your category to access the mock tests</p>
+    
+        <!-- Class Dropdown Section -->
+        <div class="class-dropdown">
+            <select id="classSelect" onchange="showClass()">
+                <option value="">Select Class</option>
+                <option value="classVI">Class VI</option>
+                <option value="classVII">Class VII</option>
+                <option value="classVIII">Class VIII</option>
+                <option value="classIX">Class IX</option>
+                <option value="classX">Class X</option>
+                <option value="classXI">Class XI</option>
+                <option value="classXII">Class XII</option>
+            </select>
+            
+        </div>
+
+    
+
+    
+        <!-- Class VI Section -->
+        <div class="class-container" id="classVI" style="display: none;">
+            <h3>Class VI</h3>
+            <div class="subjects">
+                <div class="subject">
+                    <h4>MATHS</h4>
+                    <div class="dropdown">
+                        <a href="#" id="unlock" target="_blank">Mock Test 1</a>
+                        <a href="https://drive.google.com/file/d/1wqRF6_I9DopVz0v1BiCrrBn8NdHakSZt/view?usp=sharing" target="_blank">Mock Test 2</a>
+                        <a href="https://drive.google.com/file/d/1z8TJshc2NLjE9K6taqzLTZj9bg6Jab9F/view?usp=drive_link" target="_blank">Mock Test 3</a>
+                        <a href="https://drive.google.com/file/d/1hMzKzKvfe3VVXdn0hpUIewx_PIAyF818/view?usp=drive_link" target="_blank">Mock Test 4</a>
+                        <a href="https://drive.google.com/file/d/1iZ37aKvvPMabVP-58NBA8in_jOzIRnjN/view?usp=drive_link" target="_blank">Mock Test 5</a>
+                        <a href="https://drive.google.com/file/d/1N8VVC7qGRazbQT7VhOtB4GH6w2kfXe0J/view?usp=drive_link" target="_blank">Mock Test 6</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="https://drive.google.com/file/d/1ZPDyv2-GuY2WudYkW5otZXztxcgJaJVz/view?usp=sharing"id="unlock">Mock Test 1</a>
+                        <a href="https://drive.google.com/file/d/1XLWU7Lo3UPKyoYm7uf3Uik81ZR16Ti3o/view?usp=drive_link">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Class VII Section -->
+        <div class="class-container" id="classVII" style="display: none;">
+            <h3>Class VII</h3>
+            <div class="subjects">
+                <div class="subject">
+                    <h4>English</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Class VIII Section -->
+        <div class="class-container" id="classVIII" style="display: none;">
+            <h3>Class VIII</h3>
+            <div class="subjects">
+                <div class="subject">
+                    <h4>English</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Class VIi Section -->
+        <div class="class-container" id="classIX" style="display: none;">
+            <h3>Class IX</h3>
+            <div class="subjects">
+                <div class="subject">
+                    <h4>English</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Class VIi Section -->
+        <div class="class-container" id="classX" style="display: none;">
+            <h3>Class X</h3>
+            <div class="subjects">
+                <div class="subject">
+                    <h4>English</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Class VIi Section -->
+        <div class="class-container" id="classXI" style="display: none;">
+            <h3>Class XI</h3>
+            <div class="subjects">
+                <div class="subject">
+                    <h4>English</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Class VIi Section -->
+        <div class="class-container" id="classXII" style="display: none;">
+            <h3>Class XII</h3>
+            <div class="subjects">
+                <div class="subject">
+                    <h4>English</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h4>Maths</h4>
+                    <div class="dropdown">
+                        <a href="#"id="unlock">Mock Test 1</a>
+                        <a href="#">Mock Test 2</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<!-- Login Popup -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Login Required</h2>
+        <p>Please login to access more mock tests.</p>
+        <button onclick="showLoginPage()">Login</button>
+    </div>
+</div>
+
+<!-- Payment Required Popup -->
+<div id="paymentPopup" class="modal">
+    <div class="modal-content">
+        <span id="closePayment" class="close">&times;</span>
+        <h2>Payment Required</h2>
+        <p>You need to purchase the full package to access these mock tests.</p>
+        <button onclick="goToPaymentPage()">Buy Now</button>
+    </div>
+</div>
+
+    
+        <section class="keep-moving">
+            <h2>Keep Moving Forward</h2>
+            <p>Success comes to those who never stop learning.</p>
+        </section>
+    <footer>
+        <div class="footer-container">
+            <!-- Social Media Links -->
+            <div class="footer-section social-links">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@unitedlearningexamprep/featured" target="_blank" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/Vipin-Singh/100081921580754/?mibextid=qi2Omg&rdid=NWBNPM4oNc4dWqS7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FWtSaFwN9JQW2VdoQ%2F%3Fmibextid%3Dqi2Omg" target="_blank" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/united_learning/" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B917783910790&text&type=phone_number&app_absent=0" target="_blank" class="social-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="contact@unitedlearning.com" class="social-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Policies and Links -->
+            <div class="footer-section policies">
+                <h3>Our Policies</h3>
+                <ul>
+                    <li><a href="about.html#about">About Us</a></li>
+                    <li><a href="about.html#privacy">Privacy Policy</a></li>
+                    <li><a href="about.html#terms">Terms & Conditions</a></li>
+                    <li><a href="about.html#shipping">Shipping & Delivery</a></li>
+                    <li><a href="about.html#refund">Cancellation & Refund</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <p class="copyright">&copy; 2025 United Learning. All rights reserved.</p>
+    </footer>
+</main>
+
+
+   
+
+<script type="module" src="firebase_config.js"></script>
+<script type="module" src="mock.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header class="fixed-header">
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="UL logo.png" alt="United Learning Logo" class="logo-img">
+            <span class="logo-text">
+                <a href="index.html#hero">UNITED LEARNING</a>
+            </span>
+        </div>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="index.html#course">Courses</a></li>
+          <li><a href="mock.html">Mock Tests</a></li>
+          <li><a href="exams.html">Upcoming Exams</a></li>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li id="login-btn"><a href="login.html">Login</a></li>
+          <li id="user-account" style="display: none;">
+              <a href="account.html">Account</a>
+          </li>
+          <li id="logout-btn" style="display: none;">
+              <button onclick="logout()">Logout</button>
+          </li>
+      </ul>
+      
+    </nav>
+</header>
+
+    
+    <section class="hero">
+        <div class="video-container">
+            <video autoplay loop muted playsinline class="hero-video">
+                <source src="hero.mp4"type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="index.html#course" class="btn btn-overlay">Get Started</a>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.container .course-card .course-footer button[data-course]').forEach(button => {
+      button.addEventListener('click', () => {
+        // Check if user is logged in by checking localStorage for userId
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+          alert('Please login or signup before making a purchase.');
+          window.location.href = 'login.html';
+          return;
+        }
+        const course = button.getAttribute('data-course');
+        const amount = button.getAttribute('data-amount');
+        window.location.href = `payment.html?course=${encodeURIComponent(course)}&amount=${encodeURIComponent(amount)}`;
+      });
+    });
+  });
+</script>
+    
+
+<!-- Courses Section -->
+<section id="course">
+    <div class="course-section">
+        <h2>Our Courses 📑</h2>
+        <div class="course-container">
+            <div class="course-item">
+                <button class="dropdown-btn">CLASS 6-8</button>
+                <div class="dropdown-content">
+                    <p><b>Class VI-VIII Notes:</b> Detailed study material for comprehensive learning.</p>
+                    <p><b>Home Tuition:</b> Flexible, personalized instruction at your home.</p>
+                    <p><b>Center Classes:</b> Interactive sessions at our learning centers.</p>
+                    <b><a href="mocktest.html">CLASS NOTES</a> | <a href="mock.html?class=classV">MOCK TESTS</a> | <a href="personal_tution.html">PERSONAL TUITIONS</a> | <a href="register_as_tutor.html">REGISTER AS TUTOR</a></b>
+                    <p>📞 WhatsApp: <a href="tel:7783910790">7783910790</a> | ✉️ Email: <a href="mailto:unitedlearning.in@gmail.com">unitedlearning.in@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="course-item">
+                <button class="dropdown-btn">CLASS 9-10</button>
+                <div class="dropdown-content">
+                    <p><b>Class IX-X Notes:</b> In-depth subject material for board exams.</p>
+                    <p><b>Home Tuition:</b> One-on-one coaching at home.</p>
+                    <p><b>Center Classes:</b> Well-structured learning at our centers.</p>
+                    <b><a href="mocktest.html">CLASS NOTES</a> | <a href="mock.html?class=classIX">MOCK TESTS</a> | <a href="personal_tution.html">PERSONAL TUITIONS</a> | <a href="register_as_tutor.html">REGISTER AS TUTOR</a></b>
+                    <p>📞 WhatsApp: <a href="tel:7783910790">7783910790</a> | ✉️ Email: <a href="mailto:unitedlearning.in@gmail.com">unitedlearning.in@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="course-item">
+                <button class="dropdown-btn">CLASS 11-12</button>
+                <div class="dropdown-content">
+                    <p><b>Class XI-XII Notes:</b> Subject-wise materials for competitive & board exams.</p>
+                    <p><b>Home Tuition:</b> Specialized tutoring for deeper understanding.</p>
+                    <p><b>Center Classes:</b> Expert-led guidance for enhanced learning.</p>
+                    <b><a href="mocktest.html">CLASS NOTES</a> | <a href="mock.html?class=classXII">MOCK TESTS</a> | <a href="personal_tution.html">PERSONAL TUITIONS</a> | <a href="register_as_tutor.html">REGISTER AS TUTOR</a></b>
+                    <p>📞 WhatsApp: <a href="tel:7783910790">7783910790</a> | ✉️ Email: <a href="mailto:unitedlearning.in@gmail.com">unitedlearning.in@gmail.com</a></p>
+                </div>
+            </div>
+            
+            <div class="course-item">
+                <button class="dropdown-btn">NDA</button>
+                <div class="dropdown-content">
+                    <p><b>NDA Coaching:</b> Comprehensive training for National Defence Academy.</p>
+                    <p><b>Eligibility Criteria:</b></p>
+                    <ul>
+                        <li>Unmarried Male & Female Candidates</li>
+                        <li>Age: 16.5 - 19.5 Years</li>
+                        <li>Qualification: 12th Pass (PCM for Air Force & Navy, Any Stream for Army)</li>
+                        <li>Selection Process: Written Exam + SSB Interview + Medical</li>
+                    </ul>
+                    <p>📞 WhatsApp: <a href="tel:7783910790">7783910790</a> | ✉️ Email: <a href="mailto:unitedlearning.in@gmail.com">unitedlearning.in@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="course-item">
+                <button class="dropdown-btn">AGNIVEER</button>
+                <div class="dropdown-content">
+                    <p><b>Agniveer Coaching:</b> Dedicated preparation for Agniveer recruitment.</p>
+                    <p><b>Eligibility Criteria:</b></p>
+                    <ul>
+                        <li>Age: 17.5 - 21 Years</li>
+                        <li>Qualification: 10th/12th Pass</li>
+                        <li>Selection Process: Written Exam + Physical Test + Medical</li>
+                    </ul>
+                    <p>📞 WhatsApp: <a href="tel:7783910790">7783910790</a> | ✉️ Email: <a href="mailto:unitedlearning.in@gmail.com">unitedlearning.in@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="course-item">
+                <button class="dropdown-btn">NVS/KVS/SAINIK</button>
+                <div class="dropdown-content">
+                    <p><b>NVS/KVS/Sainik Coaching:</b> Expert guidance for School Entrance Exams.</p>
+                    <p><b>Preparation for:</b></p>
+                    <ul>
+                        <li>Navodaya Vidyalaya Samiti (NVS)</li>
+                        <li>Kendriya Vidyalaya Sangathan (KVS)</li>
+                        <li>Sainik School Entrance Exams</li>
+                    </ul>
+                    <p>📞 WhatsApp: <a href="tel:7783910790">7783910790</a> | ✉️ Email: <a href="mailto:unitedlearning.in@gmail.com">unitedlearning.in@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="course-item">
+                <button class="dropdown-btn">CDS</button>
+                <div class="dropdown-content">
+                    <p><b>CDS Coaching:</b> Preparation for Combined Defence Services (CDS) Exam.</p>
+                    <p><b>Eligibility Criteria:</b></p>
+                    <ul>
+                        <li>Age: 19 - 25 Years</li>
+                        <li>Qualification: Graduate in any stream</li>
+                        <li>Selection Process: Written Exam + SSB Interview + Medical</li>
+                    </ul>
+                    <p>📞 WhatsApp: <a href="tel:7783910790">7783910790</a> | ✉️ Email: <a href="mailto:unitedlearning.in@gmail.com">unitedlearning.in@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="course-item">
+                <button class="dropdown-btn">AFCAT</button>
+                <div class="dropdown-content">
+                    <p><b>AFCAT Coaching:</b> Coaching for Air Force Common Admission Test.</p>
+                    <p><b>Eligibility Criteria:</b></p>
+                    <ul>
+                        <li>Age: 20 - 24 Years (Flying Branch), 20 - 26 Years (Ground Duty)</li>
+                        <li>Qualification: Graduate in any stream (with Physics & Maths for Flying Branch)</li>
+                        <li>Selection Process: Written Exam + AFSB Interview + Medical</li>
+                    </ul>
+                    <p>📞 WhatsApp: <a href="tel:7783910790">7783910790</a> | ✉️ Email: <a href="mailto:unitedlearning.in@gmail.com">unitedlearning.in@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="course-item">
+                <button class="dropdown-btn">JEE/NEET</button>
+                <div class="dropdown-content">
+                    <p><b>JEE/NEET Coaching:</b> Top-notch training for Engineering & Medical Entrance Exams.</p>
+                    <p>📞 WhatsApp: <a href="tel:7783910790">7783910790</a> | ✉️ Email: <a href="mailto:unitedlearning.in@gmail.com">unitedlearning.in@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+  <h2>PAID Courses 📑</h2>
+        <!-- Course 1 -->
+        <div class="course-card">
+          <img src="6.png" alt="Course 1">
+          <div class="course-info">
+            <h3>CLASS 6TH </h3>
+            <p>For CLASS 6TH mock tests and notes </p>
+            <p class="read-more">
+              📚 <strong>What’s Inside?</strong><br>
+              Get access to comprehensive <strong>Class 6 notes</strong> designed to make learning fun and easy! Each topic is explained in simple language, packed with diagrams, examples, and key points for quick revision.<br><br>
+            
+              📝 <strong>Mock Tests That Matter</strong><br>
+              Practice with chapter-wise and full-length mock tests that follow the latest exam pattern. Get instant results, performance analysis, and tips to improve.<br><br>
+            
+              Perfect for daily learning, exam prep, and boosting confidence!
+            </p>
+            
+            <button class="read-more-btn">Read More</button>
+          <div class="course-footer">
+            <span class="price"><del>₹1000 </del>&nbsp;₹100</span>
+            <div id="notes-6">
+              <button data-course="CLASS 6TH NOTES" data-amount="100">Buy Notes</button>
+            </div>
+            <div id="mocks-6">
+              <button data-course="CLASS 6TH MOCKS" data-amount="100">Buy Mocks</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Course 2 -->
+        <div class="course-card">
+          <img src="4.png" alt="Course 2">
+          <div class="course-info">
+            <h3>CLASS 7TH</h3>
+            <p>For CLASS 7TH mock tests and notes</p>
+            <p class="read-more">
+              📚 <strong>What’s Inside?</strong><br>
+              Get access to comprehensive <strong>Class 7 notes</strong> designed to make learning fun and easy! Each topic is explained in simple language, packed with diagrams, examples, and key points for quick revision.<br><br> 
+              📝 <strong>Mock Tests That Matter</strong><br>
+              Practice with chapter-wise and full-length mock tests that follow the latest exam pattern. Get instant results, performance analysis, and tips to improve.<br><br> 
+              Perfect for daily learning, exam prep, and boosting confidence!
+            </p>
+            <button class="read-more-btn">Read More</button>
+          </div>
+          <div class="course-footer">
+            <span class="price"><del>₹1000 </del>&nbsp;₹200</span>
+            <div id="notes-7">
+              <button data-course="CLASS 7TH NOTES" data-amount="200">Buy Notes</button>
+            </div>
+            <div id="mocks-7">
+              <button data-course="CLASS 7TH MOCKS" data-amount="200">Buy Mocks</button>
+            </div>
+          </div>
+        </div>
+        <!-- Course 3 -->
+        <div class="course-card">
+          <img src="5.png" alt="Course 3">
+          <div class="course-info">
+            <h3>CLASS 8TH</h3>
+            <p>For CLASS 8TH mock tests and notes</p>
+            <p class="read-more">
+              📚 <strong>What’s Inside?</strong><br>
+              Get access to comprehensive <strong>Class 8 notes</strong> designed to make learning fun and easy! Each topic is explained in simple language, packed with diagrams, examples, and key points for quick revision.<br><br>
+            
+              📝 <strong>Mock Tests That Matter</strong><br>
+              Practice with chapter-wise and full-length mock tests that follow the latest exam pattern. Get instant results, performance analysis, and tips to improve.<br><br>
+            
+              Perfect for daily learning, exam prep, and boosting confidence!
+            </p>
+            
+            <button class="read-more-btn">Read More</button>
+          <div class="course-footer">
+            <span class="price"><del>₹1000 </del>&nbsp;₹300</span>
+            <div id="notes-8">
+              <button data-course="CLASS 8TH NOTES" data-amount="300">Buy Notes</button>
+            </div>
+            <div id="mocks-8">
+              <button data-course="CLASS 8TH MOCKS" data-amount="300">Buy Mocks</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Course 4 -->
+        <div class="course-card">
+          <img src="4.png" alt="Course 4">
+          <div class="course-info">
+            <h3>CLASS 9TH</h3>
+            <p>For CLASS 9TH mock tests and notes </p>
+            <p class="read-more">
+              📚 <strong>What’s Inside?</strong><br>
+              Get access to comprehensive <strong>Class 9 notes</strong> designed to make learning fun and easy! Each topic is explained in simple language, packed with diagrams, examples, and key points for quick revision.<br><br>
+            
+              📝 <strong>Mock Tests That Matter</strong><br>
+              Practice with chapter-wise and full-length mock tests that follow the latest exam pattern. Get instant results, performance analysis, and tips to improve.<br><br>
+            
+              Perfect for daily learning, exam prep, and boosting confidence!
+            </p>
+            
+            <button class="read-more-btn">Read More</button>
+          </div>
+          <div class="course-footer">
+            <span class="price"><del>₹1000 </del>&nbsp;₹400</span>
+            <div id="notes-9">
+              <button data-course="CLASS 9TH NOTES" data-amount="400">Buy Notes</button>
+            </div>
+            <div id="mocks-9">
+              <button data-course="CLASS 9TH MOCKS" data-amount="400">Buy Mocks</button>
+            </div>
+          </div>
+        </div>
+        <!-- Course 5 -->
+        <div class="course-card">
+          <img src="4.png" alt="Course 5">
+          <div class="course-info">
+            <h3>CLASS 10TH</h3>
+            <p>For CLASS 10TH mock tests and notes </p>
+            <p class="read-more">
+              📚 <strong>What’s Inside?</strong><br>
+              Get access to comprehensive <strong>Class 10 notes</strong> designed to make learning fun and easy! Each topic is explained in simple language, packed with diagrams, examples, and key points for quick revision.<br><br>
+            
+              📝 <strong>Mock Tests That Matter</strong><br>
+              Practice with chapter-wise and full-length mock tests that follow the latest exam pattern. Get instant results, performance analysis, and tips to improve.<br><br>
+            
+              Perfect for daily learning, exam prep, and boosting confidence!
+            </p>
+            
+            <button class="read-more-btn">Read More</button>
+          </div>
+          <div class="course-footer">
+            <span class="price"><del>₹1000 </del>&nbsp;₹500</span>
+            <div id="notes-10">
+              <button data-course="CLASS 10TH NOTES" data-amount="500">Buy Notes</button>
+            </div>
+            <div id="mocks-10">
+              <button data-course="CLASS 10TH MOCKS" data-amount="500">Buy Mocks</button>
+            </div>
+          </div>
+        </div>
+        <!-- Course 6 -->
+        <div class="course-card">
+          <img src="4.png" alt="Course 6">
+          <div class="course-info">
+            <h3>CLASS 11TH</h3>
+            <p>For CLASS 11TH mock tests and notes </p>
+            <p class="read-more">
+              📚 <strong>What’s Inside?</strong><br>
+              Get access to comprehensive <strong>Class 11 notes</strong> designed to make learning fun and easy! Each topic is explained in simple language, packed with diagrams, examples, and key points for quick revision.<br><br>
+            
+              📝 <strong>Mock Tests That Matter</strong><br>
+              Practice with chapter-wise and full-length mock tests that follow the latest exam pattern. Get instant results, performance analysis, and tips to improve.<br><br>
+            
+              Perfect for daily learning, exam prep, and boosting confidence!
+            </p>
+            
+            <button class="read-more-btn">Read More</button>
+          </div>
+          <div class="course-footer">
+            <span class="price"><del>₹1000 </del>&nbsp;₹600</span>
+            <div id="notes-11">
+              <button data-course="CLASS 11TH NOTES" data-amount="600">Buy Notes</button>
+            </div>
+            <div id="mocks-11">
+              <button data-course="CLASS 11TH MOCKS" data-amount="600">Buy Mocks</button>
+            </div>
+          </div>
+        </div>
+        <!-- Course 7 -->
+        <div class="course-card">
+          <img src="4.png" alt="Course 7">
+          <div class="course-info">
+            <h3>CLASS 12TH</h3>
+            <p>For CLASS 12TH mock tests and notes </p>
+            <p class="read-more">
+              📚 <strong>What’s Inside?</strong><br>
+              Get access to comprehensive <strong>Class 12 notes</strong> designed to make learning fun and easy! Each topic is explained in simple language, packed with diagrams, examples, and key points for quick revision.<br><br>
+            
+              📝 <strong>Mock Tests That Matter</strong><br>
+              Practice with chapter-wise and full-length mock tests that follow the latest exam pattern. Get instant results, performance analysis, and tips to improve.<br><br>
+            
+              Perfect for daily learning, exam prep, and boosting confidence!
+            </p>
+            
+            <button class="read-more-btn">Read More</button>
+          </div>
+          <div class="course-footer">
+            <span class="price"><del>₹1000 </del>&nbsp;₹700</span>
+            <div id="notes-12">
+              <button data-course="CLASS 12TH NOTES" data-amount="700">Buy Notes</button>
+            </div>
+            <div id="mocks-12">
+              <button data-course="CLASS 12TH MOCKS" data-amount="700">Buy Mocks</button>
+            </div>
+          </div>
+        </div>
+        <!-- Course 8 -->
+        <div class="course-card">
+          <img src="5.png" alt="Course 8">
+          <div class="course-info">
+            <h3>AGNIVEER</h3>
+            <p>NOTES AND MOCK TESTS</p>
+            <p class="read-more">
+              📚 <strong>What’s Inside?</strong><br>
+              Get access to comprehensive <strong>AGNIVEER notes</strong> designed to make learning fun and easy! Each topic is explained in simple language, packed with diagrams, examples, and key points for quick revision.<br><br>
+            
+              📝 <strong>Mock Tests That Matter</strong><br>
+              Practice with chapter-wise and full-length mock tests that follow the latest exam pattern. Get instant results, performance analysis, and tips to improve.<br><br>
+            
+              Perfect for daily learning, exam prep, and boosting confidence!
+            </p>
+            
+            <button class="read-more-btn">Read More</button>
+          </div>
+                    <div class="course-footer">
+            <span class="price"><del>₹1000 </del>&nbsp; ₹1000</span>
+            <div id="notes-agniveer">
+              <button data-course="AGNIVEER NOTES" data-amount="1000">Buy Notes</button>
+            </div>
+            <div id="mocks-agniveer">
+              <button data-course="AGNIVEER MOCKS" data-amount="1000">Buy Mocks</button>
+            </div>
+          </div>
+        </div>
+</div>
+      <br>
+  <section class="faculties">
+    <div class="content">
+        <h2>Meet Our Expert Mentor 👑</h2>
+        <p>Guiding students with passion, experience, and excellence.</p>
+    </div>
+    <div class="mentor-profile">
+        <img src="sir.png" alt="Founder & Educator">
+        <div class="mentor-details">
+            <h3>Mr. [Name]</h3>
+            <p class="role">Founder & Lead Educator</p>
+            <p>
+                A true visionary in the field of education, Mr. [Name] is the founder and a dedicated teacher who leads by example.  
+                With years of expertise, he believes in empowering students with knowledge and skills that shape their future.  
+                His approach to teaching combines innovation, mentorship, and a deep commitment to excellence.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Achievers Section -->
+<section class="young-achievers">
+    <h2>Creating Young Achievers 🎊✌️</h2>
+    <div class="achievers-gallery">
+        <button class="prev-btn">&#10094;</button> <!-- Left Button -->
+        <div class="achiever-container">
+            <div class="achiever-track">
+                <img src="1.1.png" alt="Achiever 1">
+                <img src="1.2.png" alt="Achiever 2">
+                <img src="1.3.png" alt="Achiever 3">
+                <img src="1.4.png" alt="Achiever 4">
+                <img src="1.5.png" alt="Achiever 5">
+                <img src="1.6.png" alt="Achiever 6">
+                <img src="1.7.png" alt="Achiever 7">
+                <img src="1.8.png" alt="Achiever 8">
+                <img src="1.9.png" alt="Achiever 9">
+            </div>
+        </div>
+        <button class="next-btn">&#10095;</button> <!-- Right Button -->
+    </div>
+</section>
+
+<a href="#" class="scroll-top-btn">^</a>
+    <section class="keep-moving">
+        <h2>Keep Moving Forward</h2>
+        <p>Success comes to those who never stop learning.</p>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Map Section -->
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1780.6906161790034!2d80.90809999999998!3d26.795987200000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd1d0d3295af%3A0x48a757147f1acaab!2sUnited%20Learning!5e0!3m2!1sen!2sin!4v1742763161082!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+            <!-- Social Media Links -->
+            <div class="footer-section social-links">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@unitedlearningexamprep/featured" target="_blank" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/Vipin-Singh/100081921580754/?mibextid=qi2Omg&rdid=NWBNPM4oNc4dWqS7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FWtSaFwN9JQW2VdoQ%2F%3Fmibextid%3Dqi2Omg" target="_blank" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/united_learning/" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B917783910790&text&type=phone_number&app_absent=0" target="_blank" class="social-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:contact@unitedlearning.com" class="social-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Policies and Links -->
+            <div class="footer-section policies">
+                <h3>Our Policies</h3>
+                <ul>
+                  <li><a href="about.html#about">About Us</a></li>
+                    <li><a href="about.html#privacy">Privacy Policy</a></li>
+                    <li><a href="about.html#terms">Terms & Conditions</a></li>
+                    <li><a href="about.html#shipping">Shipping & Delivery</a></li>
+                    <li><a href="about.html#refund">Cancellation & Refund</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        
+    
+        <!-- Copyright -->
+        <p class="copyright">&copy; 2025 United Learning. All rights reserved.</p>
+    </footer>
+
+
+    <script type="module" src="firebase_config.js"></script>
+    <script type="module" src="script.js"></script>
+
+
+</body>
+</html>

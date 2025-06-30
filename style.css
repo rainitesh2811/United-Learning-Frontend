@@ -1,0 +1,827 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8ff;
+    color: #333;
+}
+
+/* Navbar */
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #2A0E61, #1B1E4B);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo-text a:hover {
+    color: #c8d2dd;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+    font-size: 19px;
+}
+
+/* Hamburger Menu for Mobile and Tablet */
+.menu-toggle {
+    display: none; /* Hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1100; /* Ensure it's above other elements */
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) { /* For tablet and below */
+    .menu-toggle {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #2A0E61;
+        position: absolute;
+        top: 60px;
+        left: 20px; /* Align to the left */
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .logo-container {
+        flex: 1;
+    }
+}
+
+/* Mobile Design (Smaller Screens) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        justify-content: flex-start; /* Align hamburger to the left */
+    }
+
+    .nav-links {
+        left: 10px; /* Slightly adjust for smaller screens */
+        top: 60px;
+        width: calc(100% - 20px); /* Center dropdown width */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Slightly smaller font for mobile */
+    }
+}
+
+
+
+/* Hero Section */
+
+/* Video Container */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Ensure the container scales with screen size */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    padding-top: 50px;
+}
+
+.hero-video {
+    width: 100%; /* Ensure the video scales to the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Button Overlay */
+.btn-overlay {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #4B0082;
+    padding: 12px 25px;
+    font-size: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-overlay:hover {
+    background-color: #FFD700; /* Gold hover effect */
+    color: #4B0082;
+}
+
+/* Responsive Adjustments for the Button Only */
+@media (max-width: 768px) {
+    .btn-overlay {
+        font-size: 15px; /* Slightly smaller text for tablets */
+        padding: 10px 20px; /* Adjust padding for better spacing */
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-overlay {
+        font-size: 16px; /* Smaller font for mobile devices */
+        padding: 8px 16px; /* Reduced padding to fit smaller screens */
+        margin-top:35px;
+    }
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .btn-overlay {
+        font-size: 18px; /* Slightly smaller text for tablets */
+        padding: 10px 20px;
+    }
+
+    .video-container {
+        padding-top: 100px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-overlay {
+        font-size: 16px; /* Adjust font size for mobile */
+        padding: 8px 16px;
+    }
+
+    .video-container {
+        padding-top: 100px; /* Minimal padding for mobile */
+    }
+}
+
+
+/* Course Section */
+.course-section {
+    text-align: center;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.course-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #4B0082;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for Buttons */
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 15px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    background: linear-gradient(135deg, #4B0082, #800080);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-btn:hover {
+    background: #FFD700;
+    color: #4B0082;
+    transform: scale(1.05);
+}
+
+/* Dropdown Content (Initially Hidden) */
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    color: #4B0082;
+    font-size: 16px;
+    text-align: left;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    transition: max-height 0.4s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* Expanded Dropdown */
+.dropdown-content.active {
+    max-height: fit-content; /* Adjust dynamically */
+    padding: 10px; /* Adds padding when expanded */
+    overflow: auto; /* Enables scrolling for large content */
+}
+
+/* Content Styles */
+.dropdown-content p {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.dropdown-content a {
+    color: #4B0082;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-container {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 10px;
+        width: 500px;
+    }
+
+    .dropdown-btn {
+        font-size: 16px;
+        padding: 10px 15px;
+        width: 400px;
+        
+    }
+
+    .dropdown-content {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 200px;
+    }
+
+    .dropdown-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+        width: 200px;
+    }
+
+    .dropdown-content {
+        font-size: 14px;
+    }
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #4B0082;
+    margin-bottom: 20px;
+    grid-column: 1 / -1; /* This ensures the h2 spans the full width of the grid */
+    text-align: center;  /* Centers the text */
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Full height for all cards */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.course-info h3 {
+    font-size: 20px;
+    color: #190527;
+    margin-bottom: 10px;
+}
+
+.course-info p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.course-info .read-more {
+    display: none;
+    font-size: 14px;
+    color: #333;
+}
+
+  
+  .course-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f5f5f5;
+  }
+  
+  .price {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #6800ad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #ccbfd2;
+  }
+  
+  .read-more-btn {
+    background: none;
+    color: #5b299c;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .read-more-btn:hover {
+    text-decoration: underline;
+  }
+
+/* Faculties Section */
+.faculties {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.faculties .content h2 {
+    font-size: 36px;
+    color: #390c57;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.faculties .content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Mentor Profile Section */
+.mentor-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.mentor-profile img {
+    width: 320px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #771f94;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.mentor-profile img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mentor Details */
+.mentor-details {
+    max-width: 500px;
+    text-align: left;
+}
+
+.mentor-details h3 {
+    font-size: 28px;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.mentor-details .role {
+    font-size: 16px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.mentor-details p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mentor-profile {
+        flex-direction: column;
+    }
+
+    .mentor-details {
+        text-align: center;
+    }
+}
+/* Achievers Gallery */
+.young-achievers {
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 50px 0;
+    position: relative;
+}
+
+.achievers-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+}
+
+/* Container for images */
+.achiever-container {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+/* Image slider */
+.achiever-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+/* Image styles */
+.achiever-track img {
+    width: calc(100% / 3 - 20px);
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 5%;
+}
+
+.next-btn {
+    right: 5%;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ------------ Responsive Design ------------ */
+
+/* Tablets (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+    .achiever-track img {
+        width: calc(100% / 2 - 15px); /* Show 2 images */
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 20px;
+        padding: 10px 16px;
+    }
+}
+
+/* Mobile (below 768px) */
+@media screen and (max-width: 767px) {
+    .achiever-track img {
+        width: 100%; /* Show 1 image at a time */
+    }
+
+    .achiever-track {
+        gap: 10px;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .prev-btn {
+        left: 2%;
+    }
+
+    .next-btn {
+        right: 2%;
+    }
+}
+
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #258991, #b01e95);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 50%;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+.scroll-top-btn:hover {
+    background: linear-gradient(135deg, #7d9dbe, #8818d3);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Hide the button when at the top */
+.scroll-top-btn:active {
+    transform: scale(0.95);
+}
+
+
+
+/* Keep Moving Section */
+.keep-moving {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #6A0DAD, #4B0082);
+    color: white;
+}
+
+.keep-moving h2 {
+    font-size: 32px;
+}
+
+.keep-moving p {
+    font-size: 18px;
+}
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #4B0082, #6A0DAD);
+    color: white;
+    font-size: 16px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Sections */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+/* Headings */
+.footer-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.youtube:hover { background: #FF0000; }
+.facebook:hover { background: #1877F2; }
+.instagram:hover { background: #C13584; }
+.whatsapp:hover { background: #25D366; }
+.email:hover { background: #FFD700; }
+
+/* Policies */
+.policies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.policies ul li {
+    margin: 8px 0;
+}
+
+.policies ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.policies ul li a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+.map-container {
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 100%; /* Make the container take the full width */
+    text-align: center; /* Center the map */
+}
+
+.map-container iframe {
+    width: 100%; /* Make the map responsive */
+    height: 300px; /* Set a default height */
+    border: 0;
+    border-radius: 8px; /* Add smooth corners for better aesthetics */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-container {
+        max-width: 90%; /* Reduce container width for smaller screens */
+        margin: 15px auto;
+    }
+    .map-container iframe {
+        height: 250px; /* Reduce height on smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        max-width: 100%; /* Full width for very small screens */
+        margin: 10px auto;
+    }
+    .map-container iframe {
+        height: 200px; /* Further reduce height for compact devices */
+    }
+}
+
+
+
+/* Copyright */
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+
+
+

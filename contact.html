@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me - Shreya Khanna</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="fixed-header">
+      <nav class="navbar">
+          <div class="logo-container">
+              <img src="UL logo.png" alt="United Learning Logo" class="logo-img">
+              <span class="logo-text">
+                  <a href="index.html#hero">UNITED LEARNING</a>
+              </span>
+          </div>
+          <!-- Hamburger Menu Toggle -->
+          <div class="menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          <!-- Navigation Links -->
+          <ul class="nav-links">
+              <li><a href="index.html#course">Courses</a></li>
+              <li><a href="mock.html">Mock Tests</a></li>
+              <li><a href="exams.html">Upcoming Exams</a></li>
+              <li><a href="notes.html">Notes</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li id="login-btn"><a href="login.html">Login</a></li>
+        <li id="user-account" style="display: none;">
+            <a href="account.html">Account</a>
+        </li>
+        <li id="logout-btn" style="display: none;">
+            <button onclick="logout()">Logout</button>
+        </li>
+          </ul>
+      </nav>
+  </header>
+
+  
+  <!-- Contact Page -->
+  <div class="contact-page">
+    <div class="image-container">
+      <img src="cont.png " alt="Connect with Me">
+    </div>
+
+    <div class="contact-container">
+      <h1>Let's Connect!</h1>
+      <p>I'd love to hear from you! Feel free to drop me a message below.</p>
+      
+      <form id="contactForm">
+        <div class="input-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+<footer>
+    <div class="footer-container">
+      <!-- Map Section -->
+    <div class="map-container">
+      <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1780.6906161790034!2d80.90809999999998!3d26.795987200000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd1d0d3295af%3A0x48a757147f1acaab!2sUnited%20Learning!5e0!3m2!1sen!2sin!4v1742763161082!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+  </div>
+        <!-- Social Media Links -->
+        <div class="footer-section social-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@unitedlearningexamprep/featured" target="_blank" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/people/Vipin-Singh/100081921580754/?mibextid=qi2Omg&rdid=NWBNPM4oNc4dWqS7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FWtSaFwN9JQW2VdoQ%2F%3Fmibextid%3Dqi2Omg" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/united_learning/" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B917783910790&text&type=phone_number&app_absent=0" target="_blank" class="social-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:contact@unitedlearning.com" class="social-icon email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Policies and Links -->
+        <div class="footer-section policies">
+            <h3>Our Policies</h3>
+            <ul>
+              <li><a href="about.html#about">About Us</a></li>
+              <li><a href="about.html#privacy">Privacy Policy</a></li>
+              <li><a href="about.html#terms">Terms & Conditions</a></li>
+              <li><a href="about.html#shipping">Shipping & Delivery</a></li>
+              <li><a href="about.html#refund">Cancellation & Refund</a></li>
+            </ul>
+        </div>
+
+        
+    </div>
+
+    
+    <!-- Copyright -->
+    <p class="copyright">&copy; 2025 United Learning. All rights reserved.</p>
+</footer>
+
+<script type="module" src="cont.js"></script>
+</body>
+</html>

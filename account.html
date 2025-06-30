@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account</title>
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="fixed-header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="UL logo.png" alt="United Learning Logo" class="logo-img">
+                <span class="logo-text">
+                    <a href="index.html#hero">UNITED LEARNING</a>
+                </span>
+            </div>
+            <!-- Hamburger Menu Toggle -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html#course">Courses</a></li>
+                <li><a href="mock.html">Mock Tests</a></li>
+                <li><a href="exams.html">Upcoming Exams</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>User Account</h2>
+        <div class="profile-section">
+            <img src="default-avatar.png" alt="Profile Picture" id="profile-pic">
+        </div>
+        <div class="account-details">
+            <p><strong>Email:</strong> <span id="user-email">Loading...</span></p>
+            <p><strong>Username:</strong> <span id="user-username">Loading...</span></p>
+            <p><strong>Phone:</strong> <span id="user-phone">Loading...</span></p>
+
+            <!-- Editable Fields for Username and Phone -->
+            <p><strong>Username:</strong>
+                <input type="text" id="edit-username" placeholder="Username" disabled />
+            </p>
+            <p><strong>Phone:</strong>
+                <input type="text" id="edit-phone" placeholder="Phone Number" disabled />
+            </p>
+
+            <button id="edit-btn">Edit</button>
+            <button id="save-btn" style="display: none;">Save Changes</button>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <script type="module" src="account.js"></script>
+</body>
+</html>

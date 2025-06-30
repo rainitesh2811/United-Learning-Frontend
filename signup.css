@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+  /* Navbar */
+  .fixed-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #2A0E61, #1B1E4B);
+
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Keep the same text color */
+    font-weight: bold; /* Make it bold */
+    font-size: 20px; /* Adjust the font size */
+}
+
+.logo-text a:hover {
+    color: #c8d2dd; /* Change color on hover */
+    transition: 0.3s ease-in-out;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    color: #ffcc00; /* Changes text color on hover */
+    font-size: 19px; /* Slightly increases font size */
+    text-decoration: none;
+}
+/* Updated Auth Container CSS */
+.auth-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin: 50px auto; /* Centered on all devices */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.auth-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    color: #6A0DAD; /* Rich purple */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.auth-container input {
+    width: 90%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid #f3e5ab; /* Soft yellow */
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.auth-container input:focus {
+    border-color: #6A0DAD; /* Purple highlight on focus */
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6A0DAD; /* Purple button */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-container button:hover {
+    background-color: #5e0ca6; /* Slightly darker purple */
+    transform: scale(1.05);
+}
+
+.auth-container p {
+    margin: 15px 0 0;
+    color: #333333;
+    font-size: 14px;
+}
+
+.auth-container a {
+    color: #FFD700; /* Bright yellow */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.auth-container a:hover {
+    color: #F2C200; /* Slightly darker yellow */
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 16px;
+        max-width: 90%;
+        margin-top: 20px;
+    }
+
+    .auth-container h2 {
+        font-size: 20px;
+    }
+
+    .auth-container button {
+        font-size: 16px;
+    }
+
+    .auth-container input {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .auth-container h2 {
+        font-size: 18px;
+    }
+
+    .auth-container p {
+        font-size: 12px;
+    }
+
+    .auth-container button {
+        padding: 10px;
+    }
+
+    .auth-container input {
+        padding: 8px;
+    }
+}
+
+

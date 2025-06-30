@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="UL logo.png" alt="United Learning Logo" class="logo-img">
+                <span class="logo-text">
+                    <a href="index.html#hero">UNITED LEARNING</a>
+                </span>
+            </div>
+            <!-- Hamburger Menu Toggle -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html#course">Courses</a></li>
+                <li><a href="mock.html">Mock Tests</a></li>
+                <li><a href="exams.html">Upcoming Exams</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <div class="login-container">
+    <h1>Login</h1>
+    <form id="login-form">
+
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button id="login-button">Login</button>
+      <p id="error-message"></p>
+
+      <p><a href="#" id="forgot-password">Forgot Password?</a></p>
+       <div id="reset-message"></div>
+
+      
+
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+  </div>
+  <script type="module" src="firebase_config.js"></script>
+  <script type="module" src="login.js"></script>
+  
+ 
+</body>
+</html>

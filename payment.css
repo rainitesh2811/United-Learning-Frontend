@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.payment-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.payment-info p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#pay-button {
+  background-color: #528ff0;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#pay-button:hover {
+  background-color: #3a6ed8;
+}
+
+#payment-status {
+  margin-top: 20px;
+  font-weight: bold;
+  color: green;
+}
