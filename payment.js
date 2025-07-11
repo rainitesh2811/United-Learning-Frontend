@@ -49,15 +49,18 @@ payButton.addEventListener('click', async () => {
         try {
           // Capture payment on backend (updated endpoint)
           var localUrl='http://localhost:3000/server_capture_payment';
-          var liveUrl='https://united-learning-backend-fvnq.onrender.com/';
+          var liveUrl='https://united-learning-backend-fvnq.onrender.com/server_capture_payment';
           const captureResponse = await fetch(liveUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              paymentId: response.razorpay_payment_id,
-              amount: parseInt(amount) * 100,
-            }),
+          method: 'POST',
+          headers: {
+          'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+          paymentId: response.razorpay_payment_id,
+          amount: parseInt(amount) * 100
+          })
           });
+
 
           const captureResult = await captureResponse.json();
 
